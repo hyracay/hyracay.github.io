@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/styles.css"/>
+	<script src="https://kit.fontawesome.com/571233200c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<img src="../src/logof.png" class="logo" width="40%">	
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="registration.html">Registration</a></li>
+				<li><a href="reviews.html">Reviews</a></li>
+				<li><a href="https://www.playvalorant.com/">Download</a></li>
+			</ul>
+		</nav>
+		<div class="form-box2">
+			<h1 id="title">Log In</h1>
+			<form action="gallery.html" onsubmit=" return authenticate()">
+				<div class="input-group">
+					<div class="input-field">
+						<i class="fa-solid fa-envelope"></i>
+						<input type="email" id="emaiL"placeholder="Email">
+					</div>
+					<div class="input-field">
+						<i class="fa-solid fa-lock"></i>
+						<input type="password" id="passW" placeholder="Password">
+					</div>
+					<p>Forgot password? <a href="#">Click here!</a></p>
+				</div>
+				<div class="btn-field">
+					<button type="submit" id="inBtn">Sign In</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</script>
+<script>
+    function authenticate(){
+        var authorised;       
+        //get input values
+        var email = document.getElementById("emaiL").value;
+        var password = document.getElementById("passW").value;
+
+        if(email == "admin@admin.com" && password == "admin"){
+          authorised = true;
+        }else{
+          authorised = false;
+          alert("Sorry, password is incorrect.");
+        }
+        return authorised;
+    }
+</script>
+</body>
+</html>
+
+<!--https://www.w3schools.com/howto/howto_js_toggle_password.asp TOGGLE SHOW PASSWORD
+	https://www.w3schools.com/howto/howto_js_password_validation.asp PW REQUIREMENTS
+	https://www.w3schools.com/howto/howto_js_detect_capslock.asp DETECT CAPS
+	https://www.w3schools.com/howto/howto_css_login_form.asp LOGIN FORM
+	https://www.w3schools.com/howto/howto_css_signup_form.asp SIGN UP FORM
+	https://www.w3schools.com/howto/howto_css_register_form.asp REGISTER FORM
+	https://www.w3schools.com/howto/howto_css_newsletter.asp NEWSLETTER	
+-->	
